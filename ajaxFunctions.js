@@ -27,7 +27,7 @@ function findExchangeRate(rateId) {
         }
     };
     // Notice how the URL is appended with the zip code
-    var url = "http://api.zippopotam.us/us/" + rate;
+    var url = "http://api.fixer.io/latest?base=USD" + rate;
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
