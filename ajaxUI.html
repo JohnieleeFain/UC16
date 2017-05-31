@@ -18,6 +18,13 @@
         <p>~~Description~~</p>
         <p>USD to New Currency</p>
         <br/>
+           <div>
+        <div id="valuebox" class="control-group">
+          <label for="value">Value</label>
+          <input type="text" name="value" id="value" placeholder="Type exchange value here" />
+        </div>
+      </div>
+        <br>
         <div id="currencies">
             <select name='currencies'>
                 <option value='AED' title='United Arab Emirates Dirham'>AED</option>
@@ -190,7 +197,7 @@
                 <option value='ZMW' title='Zambian Kwacha'>ZWL</option>
                 <option value='ZWL' title='Zimbabwean Dollar'>ZWL</option>
             </select>
-            <button class="btn btn-success btn-large">Find Rate</button>
+            <button class='btn btn-success btn-large' onclick="findExchangeRate(rate)">Find Exhange Rate</button>
         </div>
     </div>
 </body>
