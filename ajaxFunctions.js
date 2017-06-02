@@ -4,7 +4,8 @@
  */
 function findExchangeRate(rateId) {
     // First get the zip code from the HTML textbox
-    var rate = document.getElementById(rateId).value;
+    //var rate = document.getElementById(rateId).value;
+    var currency = "CZK";
     // Now make a HTTP request
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
@@ -12,11 +13,13 @@ function findExchangeRate(rateId) {
             // We got a response from the server!
             if (this.status === 200) {
                 // The request was successful!
-                displayRate(this.responseText);
+                //displayRate(this.responseText);
+                console.log(this.responseText)
             }
             else if (this.status === 404) {
                 // No postal code found
-                displayRate('{ "rate" : "none" }');
+                //displayRate('{ "rate" : "none" }');
+                console.log("no rate found");
             }
             else {
                 console.log("We have a problem...server responded with code: " + this.status);
@@ -27,7 +30,7 @@ function findExchangeRate(rateId) {
         }
     };
     // Notice how the URL is appended with the zip code
-    var url = "http://api.fixer.io/latest?base=USD" + rate;
+    var url = "http://api.fixer.io/latest?base=USD&symbols=" + currency;
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
