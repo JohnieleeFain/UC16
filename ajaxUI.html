@@ -19,9 +19,9 @@
         <p>USD to New Currency</p>
         <br/>
            <div>
-        <div id="valuebox" class="control-group">
-          <label for="value">Value</label>
-          <input type="text" name="value" id="value" placeholder="Type exchange value here" />
+        <div id="currencybox" class="control-group">
+          <label for="currency">Value</label>
+          <input type="text" name="currency" id="currency" placeholder="Type exchange value here" />
         </div>
       </div>
         <br>
@@ -197,8 +197,14 @@
                 <option value='ZMW' title='Zambian Kwacha'>ZWL</option>
                 <option value='ZWL' title='Zimbabwean Dollar'>ZWL</option>
             </select>
-            <button class='btn btn-success btn-large' onclick="findExchangeRate(rate)">Find Exhange Rate</button>
+            <button class='btn btn-success btn-large' onclick="exchangeRate('currency')">Find Exchange Rate</button>
         </div>
+    </div>
+
+
+    <br>
+    <div>
+        <div id="money" class=""> </div>
     </div>
 </body>
 
