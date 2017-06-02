@@ -46,3 +46,5 @@ function displayRate(data) {
         document.getElementById("place").innerHTML = "change this";
     }
 }
+
+// button
